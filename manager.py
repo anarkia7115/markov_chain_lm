@@ -35,6 +35,12 @@ def run_markov_o1():
     generated_text = text_generator.markov_o1(title_text, 100)
     print(generated_text)
 
+def run_markov():
+    order = 7
+    title_text = data_utils.get_title_text()
+    generated_text = text_generator.markov_chain(title_text, order, 1000)
+    print(generated_text)
+
 if __name__ == "__main__":
 
     import sys
